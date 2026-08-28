@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: monthly_revenue
+    description: Public monthly finance data product.
+    config:
+      access: public
+      contract:
+        enforced: true
+    columns:
+      - name: revenue_month
+        data_type: date
+        data_tests: [not_null, unique]
+      - name: net_revenue
+        data_type: numeric
+        data_tests: [not_null]
+      - name: order_count
+        data_type: int64
+        data_tests: [not_null]

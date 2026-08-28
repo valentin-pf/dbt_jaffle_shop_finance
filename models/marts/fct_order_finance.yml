@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: fct_order_finance
+    description: Internal finance fact built from the platform public order product.
+    config:
+      access: private
+    columns:
+      - name: order_id
+        data_tests: [not_null, unique]
+      - name: customer_id
+        data_tests: [not_null]
